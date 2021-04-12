@@ -4,7 +4,7 @@ function getFactorialOf($number) {
     if($number <= 1){
         return 1 ;
     }else{
-        $factorialOfPrev = extraLongFactorials($number-1) ;
+        $factorialOfPrev = getFactorialOf($number-1) ;
         // The order of multiplication is reversed to save excution time
         // eg. 2 * 2000000 is not as 2000000 * 2, in the second form we only loop two times
         $result = multiplier((string)$factorialOfPrev,(string)$number) ;
